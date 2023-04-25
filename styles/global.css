@@ -7,3 +7,20 @@
     @apply w-full h-screen;
   }
 }
+
+.swiper-pagination-bullet-active {
+  @apply bg-white !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-black;
+}
+
+.swiper-button-next {
+  right: 60px;
+}
+
+.swiper-button-prev {
+  left: 60px;
+}
