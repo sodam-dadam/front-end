@@ -78,6 +78,14 @@ module.exports = {
           '100%': { transform: 'translateY(0%)' },
         },
       },
+      backgroundImage: {
+        mainTopCarouselBgFirst: "url('../images/beer-garden-g53836f569_1920.jpg')",
+        mainTopCarouselBgSecond: "url('../images/still-life-g2e61095af_1920.jpg')",
+        mainTopCarouselBgThird: "url('../images/natural-gc5328cba1_1920.jpg')",
+        mainBottomCarouselBgFirst: "url('../images/bottomFirst.jpeg')",
+        mainBottomCarouselBgSecond: "url('../images/bottomSecond.png')",
+        mainBottomCarouselBgThird: "url('../images/bottomThird.png')",
+      },
       animation: {
         'down-animation': 'dropdown 0.5s ease',
         'up-animation': 'modalup 0.2s ease',
