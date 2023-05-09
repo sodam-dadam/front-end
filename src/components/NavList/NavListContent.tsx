@@ -1,6 +1,7 @@
 import ReservationInfo from '../CenterInfo/ReservationInfo';
 import SodaIntroduction from '../CenterInfo/SodaIntroduction';
 import NavListCurrentLocation from './NavListCurrentLocation';
+import SodaWayToCome from '../CenterInfo/SodaWayToCome';
 
 function NavListContent({ itemData }: { itemData: string }) {
   return (
@@ -9,8 +10,10 @@ function NavListContent({ itemData }: { itemData: string }) {
         <div className="xl:text-3xl mxl:text-2xl">{itemData}</div>
         <NavListCurrentLocation />
       </div>
+
       {itemData === '소담다담 소개' && <SodaIntroduction />}
       {itemData === '상담예약 안내' && <ReservationInfo />}
+      {itemData === '오시는 길' && <SodaWayToCome />}
     </div>
   );
 }
