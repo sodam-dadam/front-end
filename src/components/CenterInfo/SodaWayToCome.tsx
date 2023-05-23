@@ -35,7 +35,7 @@ function SodaWayToCome() {
       </Map>
       {wayToComeData && (
         <div className="flex flex-col">
-          <span className="mb-8 text-3xl text-blue-500">{wayToComeData.title}</span>
+          <span className="mb-8 text-3xl text-blue-700">{wayToComeData.title}</span>
 
           <SubBox name={wayToComeData.wayToComeName} img={wayToComeData.wayToComeImg}>
             <div className="flex flex-col">
