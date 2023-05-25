@@ -38,6 +38,4 @@ export interface IDirectionInfoType {
 export interface INavListItemMenuType {
   listName: string;
   listItem: Array<string>;
-  currentItem: string;
-  setCurrentItem: React.Dispatch<React.SetStateAction<string>>;
 }

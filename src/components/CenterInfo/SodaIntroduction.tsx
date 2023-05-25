@@ -2,7 +2,7 @@ import { ISodaInfoType } from '../../pages/CenterInfoPage/CenterInfoType';
 
 const sodaInfoData: ISodaInfoType = {
   title: '소담다담 소개',
-  headText: '소담다담 심리상담 센터는,',
+  headText: '소담다담 심리상담센터는,',
   img: '../../../public/images/sodaInfoImg.jpg',
   alt: '초록색 나뭇잎 이미지',
   content: [

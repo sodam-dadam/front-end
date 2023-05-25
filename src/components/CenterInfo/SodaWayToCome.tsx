@@ -33,10 +33,10 @@ function SodaWayToCome() {
         className="mt-12 mb-12 h-80">
         <MapMarker position={{ lat: 37.2770403, lng: 127.031917 }} />
       </Map>
+
       {wayToComeData && (
         <div className="flex flex-col">
-          <span className="mb-8 text-3xl text-blue-700">{wayToComeData.title}</span>
-
+          <span className="mb-8 text-3xl text-blue-800">{wayToComeData.title}</span>
           <SubBox name={wayToComeData.wayToComeName} img={wayToComeData.wayToComeImg}>
             <div className="flex flex-col">
               <p>{wayToComeData.wayToComeFirstLocation}</p>
