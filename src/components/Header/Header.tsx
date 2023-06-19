@@ -23,7 +23,7 @@ function Header() {
   return (
     <>
       {listData && (
-        <header>
+        <header className="sticky top-[-90px] bg-white z-10">
           <div className="flex justify-center mt-8 mb-8">
             <Link to={'/'} className="inline-flex flex-row flex-nowrap">
               <img src="../../public/images/sodaLogo.jpeg" alt="소담다담 로고" className="mr-4 w-14 h-14" />
@@ -60,7 +60,7 @@ function Header() {
                           <Link
                             to={`${item.url}/${index + 1}`}
                             key={index}
-                            className="flex justify-center p-1 ml-auto mr-auto text-xl font-normal text-white transition duration-300 ease-in-out hover:text-blue-900 hover:border-b hover:text-2xl mxl:hover:text-base mxl:text-base">
+                            className="flex justify-center p-1 ml-auto mr-auto text-xl font-normal text-white transition duration-300 ease-in-out hover:text-blue-900 hover:border-b mxl:text-base">
                             {listName}
                           </Link>
                         );

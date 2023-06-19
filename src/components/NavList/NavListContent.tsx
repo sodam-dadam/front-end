@@ -6,6 +6,16 @@ import { useParams } from 'react-router-dom';
 import Notification from '../Notice/Notification';
 import Inquiry from '../Notice/Inquiry';
 import Event from '../Notice/Event';
+import MainCounselor from '../CounselorInfo/MainCounselor';
+import SubCounselor from '../CounselorInfo/SubCounselor';
+import Personal from '../Counseling/Personal';
+import Group from '../Counseling/Group';
+import PsychologicalTest from '../Counseling/PsychologicalTest';
+import Couple from '../Counseling/Couple';
+import AdolescentsParents from '../Counseling/AdolescentsParents';
+import BookReading from '../Education/BookReading';
+import WorkShop from '../Education/WorkShop';
+import CounselingEducation from '../Education/CounselingEducation';
 
 function NavListContent({ itemData, listName }: { itemData: Array<string>; listName: string }) {
   const { id } = useParams<{ id: string }>();
@@ -21,6 +31,16 @@ function NavListContent({ itemData, listName }: { itemData: Array<string>; listN
       {listName === '공지 ・ 문의' && id === '1' && <Notification />}
       {listName === '공지 ・ 문의' && id === '2' && <Event />}
       {listName === '공지 ・ 문의' && id === '3' && <Inquiry />}
+      {listName === '상담전문가 소개' && id === '1' && <MainCounselor />}
+      {listName === '상담전문가 소개' && id === '2' && <SubCounselor />}
+      {listName === '심리상담' && id === '1' && <Personal />}
+      {listName === '심리상담' && id === '2' && <Group />}
+      {listName === '심리상담' && id === '3' && <PsychologicalTest />}
+      {listName === '심리상담' && id === '4' && <AdolescentsParents />}
+      {listName === '심리상담' && id === '5' && <Couple />}
+      {listName === '심리교육' && id === '1' && <WorkShop />}
+      {listName === '심리교육' && id === '2' && <CounselingEducation />}
+      {listName === '심리교육' && id === '3' && <BookReading />}
     </div>
   );
 }

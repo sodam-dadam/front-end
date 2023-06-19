@@ -4,6 +4,7 @@ import CounselingTimeTableTd from './CounselingTimeTableTd';
 import CounselingTimeTableTh from './CounselingTimeTableTh';
 import ReservationProcedure from './ReservationProcedure';
 import { getReservationInfo } from '../../api/reservationInfo';
+import ReservationBtn from '../ReservationBtn/ReservationBtn';
 
 function ReservationInfo() {
   const [reservationInfoData, setReservationInfoData] = useState<IReservationInfoType | undefined>();
@@ -39,6 +40,7 @@ function ReservationInfo() {
               </tr>
             </tbody>
           </table>
+          <ReservationBtn />
           <p className="pb-8 mt-12 text-lg border-b">모든 상담 및 프로그램은 사전 예약제로 운영됩니다.</p>
           <p className="pb-8 mt-8 text-lg border-b">
             예약 없는 방문은 어려우니, 미리 전화로 예약 문의를 해주시면 안내해 드립니다. 전화 연결이 안 될 때는 상담
