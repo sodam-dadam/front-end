@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function ReservationBtn() {
   return (
     <>
@@ -10,9 +12,11 @@ function ReservationBtn() {
         * 상담 내용은 철저한 비밀 보장이 되며, 내담자분의 안전을 보장하기 위한 조치가 제 1순위로 이루어집니다.{' '}
       </p>
       <div className="flex justify-center mt-12 mb-12 mxl:mt-8 mxl:mb-8">
-        <button className="pl-12 pr-12 leading-[3.5] text-white bg-blue-800 mxl:pl-6 mxl:pr-6 mxl:leading-[3]">
+        <Link
+          to={'/Reservation'}
+          className="pl-12 pr-12 leading-[3.5] text-white bg-blue-800 mxl:pl-6 mxl:pr-6 mxl:leading-[3]">
           온라인 상담예약하기 ▶︎
-        </button>
+        </Link>
       </div>
     </>
   );
