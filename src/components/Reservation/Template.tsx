@@ -3,9 +3,10 @@ import DatePickerComponent from './DatePickerComponent';
 import { IInputStateType } from './ReservationType';
 
 function Template() {
-  const thStyle = 'p-4 border-b border-gray-700 border-x bg-gray-100 text-xl font-normal h-20 w-64 mxl:text-base';
-  const tdStyle = 'p-4 border-b border-gray-700 border-r text-xl h-20 pl-12 mxl:pl-8 mxl:text-base';
-  const inputStyle = 'h-12 pl-4 border border-gray-700 rounded w-48 mxl:w-24';
+  const thStyle =
+    'p-3 border-b border-gray-700 border-x bg-gray-100 text-base font-normal h-16 w-48 mmd:text-sm whitespace-nowrap	';
+  const tdStyle = 'p-3 border-b border-gray-700 border-r text-base h-16 pl-6 mmd:pl-4 mmd:text-sm w-auto';
+  const inputStyle = 'h-8 pl-2 border border-gray-700 rounded w-28 mmd:w-20 text-sm mmd:text-xs mmd:pl-1';
 
   const inputData = {
     agree: '',
@@ -54,7 +55,7 @@ function Template() {
       /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     emailRegex.test(newInputState.email) ? setIsEmail(false) : setIsEmail(true);
 
-    const phoneNumberRegex = /^01(?:0|1|[6-9])(?:\d{3}|\d{4})\d{4}$/;
+    const phoneNumberRegex = /^01(?:0|1|[6-9])(?:\d{4}|\d{4})\d{4}$/;
     phoneNumberRegex.test(newInputState.phoneNumber) ? setIsPhone(false) : setIsPhone(true);
 
     setInputState(newInputState);
@@ -109,15 +110,15 @@ function Template() {
   return (
     <>
       <div
-        className="w-full ml-auto mr-auto bg-center bg-cover h-96 mxl:h-56"
+        className="w-full h-64 ml-auto mr-auto bg-center bg-cover mmd:h-36"
         style={{ backgroundImage: `url(../../../public/images/sodaInfoImg.jpg)` }}></div>
-      <div className="ml-[15%] mr-[15%] flex flex-col mxl:ml-[7%] mxl:mr-[7%]">
-        <p className="pb-6 mt-12 text-4xl font-medium text-blue-800 border-b-2">상담예약하기</p>
-        <div className="mt-12 text-2xl">
+      <div className="ml-[15%] mr-[15%] flex flex-col mmd:ml-[7%] mmd:mr-[7%] max-w-7xl">
+        <p className="pb-2 mt-8 text-xl font-medium text-blue-800 border-b-2 mmd:mt-6 mmd:text-lg">상담예약하기</p>
+        <div className="mt-4 text-lg mmd:text-base">
           <span className="font-semibold ">개인정보 수집·이용</span>
           <span className="text-gray-600 "> 등에 대한 동의</span>
         </div>
-        <pre className="p-10 mt-12 overflow-y-scroll text-xl border-4 h-72 mxl:text:lg">
+        <pre className="p-5 mt-4 overflow-y-scroll text-sm border-4 h-72 mmd:text-xs mmd:p-3">
           ▪︎ 수집하는 개인정보 항목 &#10; &#10;회사는 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고
           있습니다.&#10;&#10;- 수집항목 : 성명, 성별, 연령, 핸드폰, E-mail&#10;- 개인정보 수집방법 : 홈페이지(신청하기)
           &#10;&#10;▪︎ 개인정보의 수집 및 이용목적 회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.&#10;&#10;-
@@ -126,17 +127,17 @@ function Template() {
           파기합니다.&#10;단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.&#10;&#10;- 보존 항목 :
           성명, 성별, 연령, 핸드폰, E-mail&#10;&#10;- 보존 기간 : 글 삭제시 까지
         </pre>
-        <div className="flex items-center justify-end gap-1 mt-12 text-2xl">
+        <div className="flex items-center justify-end gap-1 mt-4 text-base mmd:text-sm">
           <input
             type="radio"
             value="동의"
             title="개인정보 이용,수집 등에 동의 합니다."
             id="agree"
             name="agree"
-            className="w-4 h-4 peer/agree"
+            className="w-3 h-3 peer/agree"
             onChange={changeInput}
           />
-          <label htmlFor="agree" className="peer-checked/agree:text-blue-900 mxl:text-xl">
+          <label htmlFor="agree" className="peer-checked/agree:text-blue-900">
             동의함
           </label>
           <input
@@ -145,16 +146,16 @@ function Template() {
             title="개인정보 이용,수집 등에 동의하지 않습니다."
             id="notagree"
             name="agree"
-            className="w-4 h-4 ml-2 peer/notagree"
+            className="w-3 h-3 ml-2 peer/notagree"
             onChange={changeInput}
           />
-          <label htmlFor="notagree" className="peer-checked/notagree:text-blue-900 mxl:text-xl">
+          <label htmlFor="notagree" className="peer-checked/notagree:text-blue-900">
             동의안함
           </label>
         </div>
-        <table className="mt-12">
+        <table className="mt-4">
           <tbody>
-            <tr className="border-t-4 border-slate-900 ">
+            <tr className="border-t-2 border-slate-900 ">
               <th className={thStyle}>상담/교육</th>
               <td className={tdStyle} colSpan={3}>
                 <select name="program" id="program" className={inputStyle} onChange={changSelect}>
@@ -175,9 +176,9 @@ function Template() {
               <td className={tdStyle} colSpan={3}>
                 <input type="text" name="name" className={inputStyle} id="name" onChange={changeInput} />
                 {isName ? (
-                  <div className="mt-4 ml-1 text-red-600">2글자 이상 5글자 이하로 입력해주세요.</div>
+                  <div className="mt-2 ml-1 text-sm text-red-600">2글자 이상 5글자 이하로 입력해주세요.</div>
                 ) : (
-                  <div className="mt-4 ml-1 text-blue-700">{`올바른 이름 형식입니다 :)`}</div>
+                  <div className="mt-2 ml-1 text-sm text-blue-700">{`올바른 이름 형식입니다 :)`}</div>
                 )}
               </td>
             </tr>
@@ -190,7 +191,7 @@ function Template() {
                   title="남자"
                   id="man"
                   name="gender"
-                  className="w-4 h-4 peer/man"
+                  className="w-3 h-3 peer/man"
                   onChange={changeInput}
                 />
                 <label htmlFor="man" className="ml-2 peer-checked/man:text-blue-900">
@@ -202,7 +203,7 @@ function Template() {
                   title="여자"
                   id="woman"
                   name="gender"
-                  className="w-4 h-4 ml-2 ml-8 peer/woman"
+                  className="w-3 h-3 ml-2 ml-4 peer/woman"
                   onChange={changeInput}
                 />
                 <label htmlFor="woman" className="ml-2 peer-checked/woman:text-blue-900">
@@ -235,7 +236,7 @@ function Template() {
                     name="phoneNumber_first"
                     id="phoneNumber_first"
                     required
-                    className={`${inputStyle} mr-4 mxl:mr-2`}
+                    className={`${inputStyle} mr-3 mmd:mr-2`}
                     onChange={changSelect}>
                     <option value="선택">선택</option>
                     <option value="010">010</option>
@@ -249,7 +250,7 @@ function Template() {
                   <input
                     type="text"
                     name="phoneNumber_second"
-                    className={`${inputStyle} mx-4 mxl:mx-2`}
+                    className={`${inputStyle} mx-3 mmd:mx-2`}
                     onChange={changeInput}
                     id="phoneNumber_second"
                   />
@@ -257,15 +258,15 @@ function Template() {
                   <input
                     type="text"
                     name="phoneNumber_last"
-                    className={`${inputStyle} ml-4 mr-8 mxl:ml-2 mxl:mr-4`}
+                    className={`${inputStyle} ml-3 mmd:ml-2`}
                     id="phoneNumber_last"
                     onChange={changeInput}
                   />
                 </div>
                 {isPhone ? (
-                  <div className="mt-4 ml-1 text-red-600">정확히 입력하여야 상담신청이 가능합니다.</div>
+                  <div className="mt-2 ml-1 text-sm text-red-600">정확히 입력하여야 상담신청이 가능합니다.</div>
                 ) : (
-                  <div className="mt-4 ml-1 text-blue-700">{`올바른 전화번호 형식입니다 :)`}</div>
+                  <div className="mt-2 ml-1 text-sm text-blue-700">{`올바른 전화번호 형식입니다 :)`}</div>
                 )}
               </td>
             </tr>
@@ -275,7 +276,7 @@ function Template() {
                 <input
                   type="text"
                   name="email_first"
-                  className={`${inputStyle} mr-4 mxl:mr-2`}
+                  className={`${inputStyle} mr-3 mmd:mr-2`}
                   id="email_first"
                   onChange={changeInput}
                 />
@@ -283,7 +284,7 @@ function Template() {
                 <input
                   type="text"
                   name="email_second"
-                  className={`${inputStyle} mx-4 mxl:mx-2`}
+                  className={`${inputStyle} mx-3 mmd:mx-2`}
                   id="email_second_input"
                   onChange={changeInput}
                 />
@@ -302,9 +303,9 @@ function Template() {
                   <option value="yahoo.co.kr">yahoo.co.kr</option>
                 </select>
                 {isEmail ? (
-                  <div className="mt-4 ml-1 text-red-600">이메일 형식을 확인해주세요.</div>
+                  <div className="mt-2 ml-1 text-sm text-red-600">이메일 형식을 확인해주세요.</div>
                 ) : (
-                  <div className="mt-4 ml-1 text-blue-700">{`올바른 이메일 형식입니다 :)`}</div>
+                  <div className="mt-2 ml-1 text-sm text-blue-700">{`올바른 이메일 형식입니다 :)`}</div>
                 )}
               </td>
             </tr>
@@ -312,7 +313,12 @@ function Template() {
               <th className={thStyle}>일정</th>
               <td className={`${tdStyle} flex items-center`}>
                 <DatePickerComponent inputState={inputState} setInputState={setInputState} />
-                <select name="hour" id="hour" required className={`${inputStyle} mx-4 mxl:mx-2`} onChange={changSelect}>
+                <select
+                  name="hour"
+                  id="hour"
+                  required
+                  className={`${inputStyle} ml-4 mr-2 mmd:mx-1`}
+                  onChange={changSelect}>
                   <option value="선택">선택</option>
                   <option value="9">9</option>
                   <option value="10">10</option>
@@ -324,34 +330,34 @@ function Template() {
                   <option value="16">16</option>
                   <option value="17">17</option>
                 </select>
-                시
+                <div className="text-sm mmd:text-xs">시</div>
                 <select
                   name="minute"
                   id="minute"
                   required
-                  className={`${inputStyle} mx-4 mxl:mx-2`}
+                  className={`${inputStyle} mx-2 mmd:mx-1`}
                   onChange={changSelect}>
                   <option value="선택">선택</option>
                   <option value="00">00</option>
                   <option value="30">30</option>
                 </select>
-                분
+                <div className="text-sm mmd:text-xs">분</div>
               </td>
             </tr>
-            <tr className="border-b-4 border-slate-900">
+            <tr className="border-b-2 border-slate-900">
               <th className={thStyle}>내용</th>
               <td className={`${tdStyle} pr-12`} colSpan={3}>
                 <textarea
                   name="content"
                   id="content"
-                  className={`${inputStyle} w-full h-80 p-4 mxl:w-full mxl:h-40`}
+                  className={`${inputStyle} w-full h-80 p-4 mmd:w-full mmd:h-40`}
                   onChange={changeInput}></textarea>
               </td>
             </tr>
           </tbody>
         </table>
-        <div className="flex justify-end mt-12 mb-12 mxl:mt-8 mxl:mb-8">
-          <button className="px-8 py-3 text-xl bg-gray-200 mxl:px-6 mxl:py-2">확인</button>
+        <div className="flex justify-end mt-8 mb-8 mmd:mt-4 mmd:mb-4">
+          <button className="px-6 py-2 text-sm bg-gray-200 mmd:text-xs mmd:px-4">확인</button>
         </div>
       </div>
     </>

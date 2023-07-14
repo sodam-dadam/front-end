@@ -8,6 +8,7 @@ import CounselingPage from './pages/CounselingPage/CounselingPage';
 import EducationPage from './pages/EducationPage/EducationPage';
 import CounselorInfoPage from './pages/CounselorInfoPage/CounselorInfoPage';
 import ReservationPage from './pages/ReservationPage/ReservationPage';
+import BulletinPage from './pages/BulletinPage/BulletinPage';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route element={<CounselingPage />} path="/Counseling/:id" />
         <Route element={<EducationPage />} path="/Education/:id" />
         <Route element={<NoticePage />} path="/Notice/:id" />
+        <Route element={<BulletinPage />} path="/Bulletin/:id" />
         <Route element={<ReservationPage />} path="/Reservation" />
       </Routes>
       <Footer />

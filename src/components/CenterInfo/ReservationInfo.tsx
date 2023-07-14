@@ -19,12 +19,12 @@ function ReservationInfo() {
     <>
       {reservationInfoData && (
         <div className="flex flex-col">
-          <div className="mt-12 mb-12 text-2xl mmd:text-lg mmd:mt-6 mmd:mb-6">◦ 예약 절차</div>
+          <div className="mt-8 mb-8 text-xl mmd:text-lg mmd:mt-4 mmd:mb-4">◦ 예약 절차</div>
           {reservationInfoData.reservation.map((item, index) => {
             return <ReservationProcedure procedureData={item} key={index} />;
           })}
-          <div className="mt-10 mb-8 text-2xl mmd:text-xl mmd:mt-6 mmd:mb-6">◦ SODA 상담시간</div>
-          <table className="mb-8 border-2">
+          <div className="mb-4 text-lg mmd:text-base mmd:mb-4">◦ SODA 상담시간</div>
+          <table className="mb-4 border-2">
             <thead>
               <tr className="bg-gray-50">
                 {reservationInfoData.counselingTime.map((item, index) => {
