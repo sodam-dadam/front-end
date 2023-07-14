@@ -21,24 +21,24 @@ export const handlers = [
             content: '스트레스 완화, 적응력 향상을 위한 1:1 성인상담',
           },
           {
+            img: '/images/groupCounselingImg.png',
+            title: '집단 상담',
+            content: '공동의 주제에 대해 나누는 성장, 교육집단',
+          },
+          {
             img: '/images/psychologicalTestImg.png',
             title: '심리 검사',
-            content: '개인 맞춤형 심리검사를 선정하여 심층적 자기 이해',
+            content: '맞춤형 심리검사를 선정하여 심층적 자기 이해',
           },
           {
             img: '/images/teenagerAndParentCounselingImg.png',
-            title: '청소년 & 부모상담',
+            title: '청소년 • 부모상담',
             content: '청소년의 적응문제 해결 및 부모역량강화',
           },
           {
             img: '/images/coupleCounselingImg.png',
-            title: '부부 & 커플상담',
+            title: '부부 • 커플상담',
             content: '부부, 커플의 관계성 향상을 위한 심리상담',
-          },
-          {
-            img: '/images/groupCounselingImg.png',
-            title: '집단 상담',
-            content: '공동의 주제에 대해 나누는 성장, 교육집단',
           },
         ],
         education: [
@@ -184,14 +184,14 @@ export const handlers = [
         {
           url: '/CounselorInfo',
           listName: '상담전문가 소개',
-          listItem: ['상담심리전문가', '전임 상담원'],
+          listItem: ['상담심리전문가'],
           listImg: '../../../public/images/centerInfoImg.png',
           listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
         },
         {
           url: '/Counseling',
           listName: '심리상담',
-          listItem: ['개인상담', '집단상담', '심리검사', '청소년 & 부모상담', '부부 & 커플상담'],
+          listItem: ['개인상담', '집단상담', '심리검사', '청소년 • 부모상담', '부부 • 커플상담'],
           listImg: '../../../public/images/centerInfoImg.png',
           listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
         },
@@ -209,11 +209,18 @@ export const handlers = [
           listImg: '../../../public/images/centerInfoImg.png',
           listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
         },
+        {
+          url: '/Bulletin',
+          listName: '게시글 작성',
+          listItem: ['공지글 작성', '이벤트 작성'],
+          listImg: '../../../public/images/centerInfoImg.png',
+          listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
+        },
       ]),
     );
   }),
 
-  rest.get('http://localhost:3000/counselorInfo/main', (req, res, ctx) => {
+  rest.get('http://localhost:3000/counselorInfo', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -257,19 +264,6 @@ export const handlers = [
               '청소년상담사 2급(여성가족부)',
             ],
           },
-        ],
-      }),
-    );
-  }),
-
-  rest.get('http://localhost:3000/counselorInfo/sub', (req, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json({
-        infoText:
-          '가온해 우리는 별하 감사합니다 도담도담 나비잠 함초롱하다 아슬라 사과 옅구름 나비잠 아름드리 나비잠 다솜 도담도담 여우비 별빛 도서 소록소록 로운 함초롱하다 바람꽃 별빛 여우비 예그리나 포도 사과 감사합니다 미리내 노트북 컴퓨터 책방 도르레 책방 바나나 가온누리 여우비 나래 그루잠 가온해 나래 별하 포도 우리는 별빛 여우별달볓 안녕 포도 아름드리. 옅구름 감사합니다 가온해 그루잠 달볓 옅구름 함초롱하다 별빛 우리는 예그리나예그리나 이플 별빛 도르레 아름드리 미쁘다 아슬라 감또개 도르레 도서 아름드리 소록소록 옅구름 예그리나 미쁘다늘품 감또개 아름드리 도담도담 가온해 이플 이플 별빛 아련 사과 예그리나 감또개 감사합니다 예그리나 사과노트북 다솜 달볓 산들림 달볓 가온누리 미쁘다 비나리 감사합니다 함초롱하다. 소솜 소록소록 달볓 나비잠 안녕아련 안녕 가온해 우리는 우리는 사과 옅구름 달볓 예그리나 예그리나 아슬라 비나리 달볓 우리는 로운 감사합니다감사합니다 노트북 우리는 컴퓨터 함초롱하다 비나리 포도 도르레 미리내 가온해 도르레 함초롱하다 가온누리미리내 감또개 포도 비나리 비나리 가온해 도서관 달볓 도담도담 이플 감또개 아름드리 소솜 나비잠 포도 도서관.',
-        lastText: '끝맺음말',
-        career: [
           {
             img: '../../../public/images/centerImg1.jpeg',
             name: '김혜미',

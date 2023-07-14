@@ -32,7 +32,7 @@ function Template() {
       {currentList ? (
         <div className="flex flex-col">
           <img src={currentList.listImg} alt={currentList.listImgAlt} />
-          <div className="flex gap-[5%] ml-[12%] mr-[12%] mt-[5%] mxl:flex-col">
+          <div className="flex gap-[5%] mx-[12%] mt-[5%] mmd:flex-col max-w-6xl">
             <NavListItemMenu listName={currentList.listName} listItem={currentList.listItem} url={currentList.url} />
             <NavListContent itemData={currentList.listItem} listName={currentList.listName} />
           </div>

@@ -1,7 +1,7 @@
 function FooterInfoBtn({ btnName }: { btnName: string }) {
   return (
     <li>
-      <button className="h-12 font-semibold w-28">{btnName}</button>
+      <button className="h-8 w-28">{btnName}</button>
     </li>
   );
 }

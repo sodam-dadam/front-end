@@ -3,24 +3,24 @@ import FooterInfoBtn from './FooterInfoBtn';
 function Footer() {
   return (
     <footer className="border-t">
-      <div className="mt-4 mb-4 mxl:mt-1 mxl:mb-1">
-        <div className="flex justify-center gap-32 mxl:hidden">
+      <div className="mt-4 mb-4 mlg:mt-1 mlg:mb-1">
+        <div className="flex justify-center gap-32 mlg:hidden">
           <section>
-            <h3 className="text-lg font-bold">소담다담 심리상담센터</h3>
+            <h3 className="font-medium">소담다담 심리상담센터</h3>
             <ul>
-              <li className="mt-6 mb-6">
-                <span className="mr-3 text-xl font-bold">010-2331-4058</span>
+              <li className="mt-4 mb-4">
+                <span className="mr-3">010-2331-4058</span>
                 <span>월~토요일 오전 9시 - 오후 6시</span>
               </li>
               <li className="flex">
-                <button className="h-12 mb-4 mr-4 border-2 w-28">카카오톡 문의</button>
+                <button className="py-2 mb-4 mr-4 text-sm border-2 w-28">카카오톡 문의</button>
                 <div>
-                  <p className="flex">
+                  <p className="flex text-sm">
                     <span className="text-gray-500">월~토요일</span>
                     <span className="text-gray-500 font-extralight">ㅣ</span>
                     <span className="text-gray-500">오전 9시 - 오후 6시</span>
                   </p>
-                  <p className="flex">
+                  <p className="flex text-sm">
                     <span className="text-gray-500">일/공휴일</span>
                     <span className="text-gray-500 font-extralight">ㅣ</span>
                     <span className="text-gray-500">오전 9시 - 오후 1시</span>
@@ -28,8 +28,8 @@ function Footer() {
                 </div>
               </li>
               <li className="flex">
-                <button className="h-12 mr-4 border-2 w-28">1:1 문의</button>
-                <div>
+                <button className="py-2 mr-4 text-sm border-2 w-28">1:1 문의</button>
+                <div className="text-sm">
                   <p className="text-gray-500">365일</p>
                   <p className="text-gray-500">센터 운영시간에 순차적으로 답변 드리겠습니다.</p>
                 </div>
@@ -37,7 +37,7 @@ function Footer() {
             </ul>
           </section>
           <section>
-            <ul>
+            <ul className="text-sm">
               <li>
                 <span className="text-gray-500">법인명 (상호) : 소담다담</span>
                 <span className="text-gray-500">사업자등록번호 : 261-81-23567 </span>
@@ -67,7 +67,7 @@ function Footer() {
           </section>
         </div>
         <div>
-          <ul className="flex justify-around max-w-3xl ml-auto mr-auto flex-nowrap xl:hidden">
+          <ul className="flex justify-around max-w-3xl ml-auto mr-auto text-sm flex-nowrap lg:hidden">
             <FooterInfoBtn btnName="카카오톡 문의" />
             <FooterInfoBtn btnName="1:1 문의" />
             <FooterInfoBtn btnName="상세정보" />
@@ -75,7 +75,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex items-center justify-center h-10 text-base bg-gray-50 mxl:text-sm mxl:h-8 ">
+      <div className="flex items-center justify-center h-10 text-sm bg-gray-50 mlg:text-xs mlg:h-8 ">
         <span>© SODA. ALL RIGHTS RESERVED</span>
       </div>
     </footer>

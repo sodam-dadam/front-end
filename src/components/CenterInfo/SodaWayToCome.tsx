@@ -5,9 +5,9 @@ import { ISodaSubBoxType, IWayToComeResponseType } from './CenterInfoType';
 
 function SubBox({ name, children, img }: ISodaSubBoxType) {
   return (
-    <div className="flex pt-8 pb-8 border-t">
+    <div className="flex pt-4 pb-4 border-t mmd:text-sm">
       <div className="flex align-middle">
-        <img src={img} alt="img" className="h-4 mr-4" />
+        <img src={img} alt="img" className="h-6 mr-4 mmd:h-4 mmd:mr-2" />
         <span className="mr-12 font-semibold whitespace-nowrap">{name}</span>
       </div>
       <div className="text-gray500">{children}</div>
@@ -36,7 +36,7 @@ function SodaWayToCome() {
 
       {wayToComeData && (
         <div className="flex flex-col">
-          <span className="mb-8 text-3xl text-blue-800">{wayToComeData.title}</span>
+          <span className="mb-8 text-lg text-blue-800 mmd:text-base">{wayToComeData.title}</span>
           <SubBox name={wayToComeData.wayToComeName} img={wayToComeData.wayToComeImg}>
             <div className="flex flex-col">
               <p>{wayToComeData.wayToComeFirstLocation}</p>

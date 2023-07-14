@@ -24,7 +24,7 @@ function BottomCarousel() {
   SwiperCore.use([Autoplay, Pagination, Navigation]);
 
   return (
-    <section className="flex w-full max-w-5xl mx-auto mb-10 border-2 h-28">
+    <section className="flex w-full max-w-6xl mx-auto mb-10 border-2 h-28">
       <Swiper
         slidesPerView={1}
         autoplay={{

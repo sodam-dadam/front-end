@@ -2,6 +2,7 @@ export interface IMainCardType {
   img: string;
   title: string;
   content: string;
+  name: string;
 }
 
 export interface IMainBoxType {
