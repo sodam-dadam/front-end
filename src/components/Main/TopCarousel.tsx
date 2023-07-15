@@ -19,7 +19,7 @@ function TopCarousel() {
   SwiperCore.use([Autoplay]);
 
   return (
-    <section className="flex w-full mx-auto mb-10 font-extrabold h-80 msm:h-52">
+    <section className="flex w-full mx-auto mb-10 font-extrabold h-80 msm:h-52 mlg:mb-5">
       <Swiper
         slidesPerView={1}
         autoplay={{

@@ -1,4 +1,6 @@
+import Template from '../../components/NavList/Template';
+
 function NoticePage() {
-  return <div>NoticePage</div>;
+  return <Template />;
 }
 export default NoticePage;
