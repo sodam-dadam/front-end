@@ -62,7 +62,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/centerinfo/waytocome', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/centerinfo/waytocome', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -86,7 +86,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/centerinfo/sodaInfo', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/centerinfo/sodaInfo', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -111,7 +111,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/centerinfo/reservationInfo', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/centerinfo/reservationInfo', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -170,7 +170,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/navList', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/navList', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json([
@@ -220,7 +220,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/counselorInfo', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/counselorInfo', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -283,7 +283,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/counseling/personal', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/counseling/personal', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -301,7 +301,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/counseling/group', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/counseling/group', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -319,7 +319,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/counseling/psychologicalTest', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/counseling/psychologicalTest', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -338,7 +338,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/counseling/adolescentsParents', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/counseling/adolescentsParents', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -356,7 +356,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/counseling/couple', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/counseling/couple', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -377,7 +377,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/education/workShop', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/education/workShop', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -398,7 +398,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/education/counselingEducation', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/education/counselingEducation', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -415,7 +415,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/education/bookReading', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/education/bookReading', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -432,7 +432,7 @@ export const handlers = [
     );
   }),
 
-  rest.get('http://localhost:3000/noticeposts/search', (req, res, ctx) => {
+  rest.get('http://sodamdadam.s3-website.us-east-2.amazonaws.com/noticeposts/search', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
