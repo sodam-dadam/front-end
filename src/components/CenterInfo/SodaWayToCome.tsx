@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Map, MapMarker } from 'react-kakao-maps-sdk';
+// import { Map, MapMarker } from 'react-kakao-maps-sdk';
 import { getWayToCome } from '../../api/wayToCome';
 import { ISodaSubBoxType, IWayToComeResponseType } from './CenterInfoType';
 
@@ -26,13 +26,13 @@ function SodaWayToCome() {
   }, []);
   return (
     <div className="w-full h-full">
-      <Map
+      {/* <Map
         center={{ lat: 37.2770403, lng: 127.031917 }}
         level={3}
         style={{ width: '100%' }}
         className="mt-12 mb-12 h-80">
         <MapMarker position={{ lat: 37.2770403, lng: 127.031917 }} />
-      </Map>
+      </Map> */}
 
       {wayToComeData && (
         <div className="flex flex-col">
