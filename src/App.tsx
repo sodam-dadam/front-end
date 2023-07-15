@@ -10,7 +10,6 @@ import CounselorInfoPage from './pages/CounselorInfoPage/CounselorInfoPage';
 import ReservationPage from './pages/ReservationPage/ReservationPage';
 import BulletinPage from './pages/BulletinPage/BulletinPage';
 
-
 function App() {
   return (
     <div className="App">
