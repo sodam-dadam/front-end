@@ -13,13 +13,13 @@ function Header() {
     setMenuVisible(false);
   };
   const [listData, setListData] = useState<INavListDataType[] | undefined>();
-  useEffect(() => {
-    const listFn = async () => {
-      const data = await getNavList();
-      setListData(data);
-    };
-    listFn();
-  }, []);
+  // useEffect(() => {
+  //   const listFn = async () => {
+  //     const data = await getNavList();
+  //     setListData(data);
+  //   };
+  //   listFn();
+  // }, []);
   return (
     <>
       {listData && (
