@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
 
 const instance: AxiosInstance = axios.create({
-  baseURL: 'http://sodamdadam.s3-website.us-east-2.amazonaws.com/',
+  baseURL: 'http://localhost:3000//',
   headers: {
     'Content-Type': 'application/json',
   },

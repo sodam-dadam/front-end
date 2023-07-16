@@ -10,7 +10,16 @@ export interface IMainBoxType {
   name: string;
 }
 
+export interface INavlistType {
+  url: string;
+  listName: string;
+  listItem: Array<string>;
+  listImg: string;
+  listImgAlt: string;
+}
+
 export interface IMainResponseType {
   consulting: IMainCardType[];
   education: IMainCardType[];
+  navlist: INavlistType[];
 }

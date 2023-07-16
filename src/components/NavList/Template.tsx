@@ -1,29 +1,37 @@
 import { useLocation } from 'react-router-dom';
 import NavListContent from './NavListContent';
 import NavListItemMenu from './NavListItemMenu';
-import { INavListDataType } from './NavListType';
 import { useEffect, useState } from 'react';
-import { getNavList } from '../../api/navList';
+import { getMainData } from '../../api/main';
+import { IMainResponseType, INavlistType } from '../Main/MainType';
 
 function Template() {
   const currentUrl = useLocation();
-  const [currentList, setCurrentList] = useState<INavListDataType | null>(null);
+  const [currentList, setCurrentList] = useState<INavlistType | null>(null);
 
-  const [listData, setListData] = useState<INavListDataType[] | undefined>();
+  // const [listData, setListData] = useState<INavListDataType[] | undefined>();
+  // useEffect(() => {
+  //   const listFn = async () => {
+  //     const data = await getNavList();
+  //     setListData(data);
+  //   };
+  //   listFn();
+  // }, []);
+  const [listData, setListData] = useState<IMainResponseType | undefined>();
   useEffect(() => {
-    const listFn = async () => {
-      const data = await getNavList();
+    const mainFn = async () => {
+      const data = await getMainData();
       setListData(data);
     };
-    listFn();
+    mainFn();
   }, []);
 
   useEffect(() => {
     if (listData) {
-      const ListUrl = listData.map((item) => {
+      const ListUrl = listData.navlist.map((item) => {
         return currentUrl.pathname.includes(item.url);
       });
-      setCurrentList(listData[ListUrl.indexOf(true)]);
+      setCurrentList(listData.navlist[ListUrl.indexOf(true)]);
     }
   }, [currentUrl, listData]);
 
