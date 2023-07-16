@@ -58,14 +58,18 @@ function Bulletin() {
 
         {/* 업로드한 파일 목록 */}
         <div className="mb-4">
-          {files.map((file, index) => (
-            <div key={index} className="flex items-center mb-2">
-              <span>{file.name}</span>
-              <button type="button" className="ml-2 text-red-600 hover:text-red-800" onClick={() => removeFile(index)}>
-                x
-              </button>
-            </div>
-          ))}
+          {files &&
+            files.map((file, index) => (
+              <div key={index} className="flex items-center mb-2">
+                <span>{file.name}</span>
+                <button
+                  type="button"
+                  className="ml-2 text-red-600 hover:text-red-800"
+                  onClick={() => removeFile(index)}>
+                  x
+                </button>
+              </div>
+            ))}
         </div>
 
         <button type="submit" className="px-6 py-2 mb-12 font-semibold text-white bg-blue-800 rounded">
