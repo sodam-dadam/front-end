@@ -1,5 +1,6 @@
 import { rest } from 'msw';
-const apiKey = import.meta.env.VITE_API_KEY;
+// const apiKey = import.meta.env.VITE_API_KEY;
+const apiKey = 'http://sodamdadam.s3-website.us-east-2.amazonaws.com/';
 export const handlers = [
   rest.get(`${apiKey}start`, (req, res, ctx) => {
     return res(
