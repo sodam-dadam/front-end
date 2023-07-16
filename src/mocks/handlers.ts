@@ -1,7 +1,6 @@
 import { rest } from 'msw';
-const apiKey = import.meta.env.VITE_API_KEY;
 export const handlers = [
-  rest.get(`${apiKey}start`, (req, res, ctx) => {
+  rest.get(`localhost:3000/start`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -10,7 +9,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}`, (req, res, ctx) => {
+  rest.get(`localhost:3000/`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -106,7 +105,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}centerinfo/waytocome`, (req, res, ctx) => {
+  rest.get(`localhost:3000/centerinfo/waytocome`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -130,7 +129,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}centerinfo/sodaInfo`, (req, res, ctx) => {
+  rest.get(`localhost:3000/centerinfo/sodaInfo`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -155,7 +154,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}centerinfo/reservationInfo`, (req, res, ctx) => {
+  rest.get(`localhost:3000/centerinfo/reservationInfo`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -214,7 +213,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}counselorInfo`, (req, res, ctx) => {
+  rest.get(`localhost:3000/counselorInfo`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -277,7 +276,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}counseling/personal`, (req, res, ctx) => {
+  rest.get(`localhost:3000/counseling/personal`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -295,7 +294,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}counseling/group`, (req, res, ctx) => {
+  rest.get(`localhost:3000/counseling/group`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -313,7 +312,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}counseling/psychologicalTest`, (req, res, ctx) => {
+  rest.get(`localhost:3000/counseling/psychologicalTest`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -332,7 +331,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}counseling/adolescentsParents`, (req, res, ctx) => {
+  rest.get(`localhost:3000/counseling/adolescentsParents`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -350,7 +349,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}counseling/couple`, (req, res, ctx) => {
+  rest.get(`localhost:3000/counseling/couple`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -371,7 +370,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}education/workShop`, (req, res, ctx) => {
+  rest.get(`localhost:3000/education/workShop`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -392,7 +391,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}education/counselingEducation`, (req, res, ctx) => {
+  rest.get(`localhost:3000/education/counselingEducation`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -409,7 +408,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}education/bookReading`, (req, res, ctx) => {
+  rest.get(`localhost:3000/education/bookReading`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -426,7 +425,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${apiKey}noticeposts/search`, (req, res, ctx) => {
+  rest.get(`localhost:3000/noticeposts/search`, (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
