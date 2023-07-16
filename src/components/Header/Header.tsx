@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import HeaderNavList from './HeaderNavList';
 import { useEffect, useState } from 'react';
-import { INavListDataType } from '../NavList/NavListType';
-import { getNavList } from '../../api/navList';
+import { IMainResponseType } from '../Main/MainType';
+import { getMainData } from '../../api/main';
 
 function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -12,13 +12,14 @@ function Header() {
   const handleMouseLeave = () => {
     setMenuVisible(false);
   };
-  const [listData, setListData] = useState<INavListDataType[] | undefined>();
+
+  const [listData, setListData] = useState<IMainResponseType | undefined>();
   useEffect(() => {
-    const listFn = async () => {
-      const data = await getNavList();
+    const mainFn = async () => {
+      const data = await getMainData();
       setListData(data);
     };
-    listFn();
+    mainFn();
   }, []);
   return (
     <>
@@ -47,7 +48,7 @@ function Header() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
             <div className="relative flex max-w-screen-xl ml-auto mr-auto ">
-              {listData.slice(0, 5).map((item, index) => (
+              {listData.navlist.slice(0, 5).map((item, index) => (
                 <HeaderNavList headerList={item} key={index} />
               ))}
             </div>
@@ -56,7 +57,7 @@ function Header() {
                 menuVisible ? 'h-40 mlg:h-32' : 'h-0'
               } transition-height duration-[400ms] ease-in-out overflow-hidden z-10`}>
               <div className="flex max-w-screen-xl ml-auto mr-auto">
-                {listData.slice(0, 5).map((item, index) => {
+                {listData.navlist.slice(0, 5).map((item, index) => {
                   return (
                     <div className="inset-x-0 z-20 flex flex-col h-0 gap-2 mt-3 basis-1/5 mlg:mt-2" key={index}>
                       {item.listItem.slice(0, 5).map((listName, index) => {

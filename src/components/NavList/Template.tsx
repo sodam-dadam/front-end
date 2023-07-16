@@ -8,15 +8,6 @@ import { IMainResponseType, INavlistType } from '../Main/MainType';
 function Template() {
   const currentUrl = useLocation();
   const [currentList, setCurrentList] = useState<INavlistType | null>(null);
-
-  // const [listData, setListData] = useState<INavListDataType[] | undefined>();
-  // useEffect(() => {
-  //   const listFn = async () => {
-  //     const data = await getNavList();
-  //     setListData(data);
-  //   };
-  //   listFn();
-  // }, []);
   const [listData, setListData] = useState<IMainResponseType | undefined>();
   useEffect(() => {
     const mainFn = async () => {
