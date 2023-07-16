@@ -1,7 +1,8 @@
 import axios, { AxiosInstance } from 'axios';
+const apiURL = process.env.REACT_APP_API_URL;
 
 const instance: AxiosInstance = axios.create({
-  baseURL: 'http://sodamdadam.s3-website.us-east-2.amazonaws.com/',
+  baseURL: apiURL,
   headers: {
     'Content-Type': 'application/json',
   },
