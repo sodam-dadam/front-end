@@ -1,8 +1,8 @@
 import axios, { AxiosInstance } from 'axios';
-const apiURL = process.env.REACT_APP_API_URL;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 const instance: AxiosInstance = axios.create({
-  baseURL: apiURL,
+  baseURL: apiKey,
   headers: {
     'Content-Type': 'application/json',
   },
