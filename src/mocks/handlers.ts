@@ -1,6 +1,7 @@
 import { rest } from 'msw';
+
 export const handlers = [
-  rest.get(`localhost:3000/start`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/start', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -9,7 +10,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -105,7 +106,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/centerinfo/waytocome`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/centerinfo/waytocome', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -129,7 +130,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/centerinfo/sodaInfo`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/centerinfo/sodaInfo', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -154,7 +155,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/centerinfo/reservationInfo`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/centerinfo/reservationInfo', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -213,7 +214,57 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/counselorInfo`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/navList', (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json([
+        {
+          url: '/CenterInfo',
+          listName: '센터 안내',
+          listItem: ['소담다담 소개', '상담예약 안내', '오시는 길'],
+          listImg: '../../../public/images/centerInfoImg.png',
+          listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
+        },
+        {
+          url: '/CounselorInfo',
+          listName: '상담전문가 소개',
+          listItem: ['상담심리전문가'],
+          listImg: '../../../public/images/centerInfoImg.png',
+          listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
+        },
+        {
+          url: '/Counseling',
+          listName: '심리상담',
+          listItem: ['개인상담', '집단상담', '심리검사', '청소년 • 부모상담', '부부 • 커플상담'],
+          listImg: '../../../public/images/centerInfoImg.png',
+          listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
+        },
+        {
+          url: '/Education',
+          listName: '심리교육',
+          listItem: ['특강 및 워크숍', '상담자 교육', '북리딩 세미나'],
+          listImg: '../../../public/images/centerInfoImg.png',
+          listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
+        },
+        {
+          url: '/Notice',
+          listName: '공지 ・ 문의',
+          listItem: ['교육/워크숍 공지', '이벤트', '문의'],
+          listImg: '../../../public/images/centerInfoImg.png',
+          listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
+        },
+        {
+          url: '/Bulletin',
+          listName: '게시글 작성',
+          listItem: ['공지글 작성', '이벤트 작성'],
+          listImg: '../../../public/images/centerInfoImg.png',
+          listImgAlt: '두사람이 손을 잡고 있는 따뜻한 이미지',
+        },
+      ]),
+    );
+  }),
+
+  rest.get('http://localhost:3000/counselorInfo', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -276,7 +327,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/counseling/personal`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/counseling/personal', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -294,7 +345,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/counseling/group`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/counseling/group', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -312,7 +363,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/counseling/psychologicalTest`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/counseling/psychologicalTest', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -331,7 +382,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/counseling/adolescentsParents`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/counseling/adolescentsParents', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -349,7 +400,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/counseling/couple`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/counseling/couple', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -370,7 +421,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/education/workShop`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/education/workShop', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -391,7 +442,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/education/counselingEducation`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/education/counselingEducation', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -408,7 +459,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/education/bookReading`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/education/bookReading', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -425,7 +476,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`localhost:3000/noticeposts/search`, (req, res, ctx) => {
+  rest.get('http://localhost:3000/noticeposts/search', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
