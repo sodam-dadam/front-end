@@ -28,7 +28,7 @@ function Header() {
           <div className="flex justify-center mt-4 mb-4 mlg:mt-2 mlg:mb-2">
             <Link to={'/'} className="inline-flex flex-row flex-nowrap">
               <img
-                src="../../public/images/sodaLogo.jpeg"
+                src="https://ifh.cc/g/wn9Swv.jpg"
                 alt="소담다담 로고"
                 className="w-10 h-10 mr-4 mlg:w-8 mlg:h-8 mlg:mr-2"
               />

@@ -32,6 +32,6 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.SECRET_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
-        REACT_APP_API_URL: ${{ secrets.REACT_APP_API_KEY }}
+        REACT_APP_API_URL: ${{ secrets.REACT_APP_API_KEY}}
       run: |
         aws s3 cp --recursive --region us-east-2 dist s3://sodamdadam
