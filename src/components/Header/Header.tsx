@@ -47,33 +47,37 @@ function Header() {
             className="pt-2 pb-2 border-t border-b mlg:pt-1 mlg:pb-1"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
-            <div className="relative flex max-w-screen-xl ml-auto mr-auto ">
-              {listData.navlist.slice(0, 5).map((item, index) => (
-                <HeaderNavList headerList={item} key={index} />
-              ))}
-            </div>
+            {listData?.navlist && (
+              <div className="relative flex max-w-screen-xl ml-auto mr-auto ">
+                {listData.navlist.slice(0, 5).map((item, index) => (
+                  <HeaderNavList headerList={item} key={index} />
+                ))}
+              </div>
+            )}
             <div
               className={`absolute w-full mt-2 bg-blue-500 mlg:mt-1 ${
                 menuVisible ? 'h-40 mlg:h-32' : 'h-0'
               } transition-height duration-[400ms] ease-in-out overflow-hidden z-10`}>
-              <div className="flex max-w-screen-xl ml-auto mr-auto">
-                {listData.navlist.slice(0, 5).map((item, index) => {
-                  return (
-                    <div className="inset-x-0 z-20 flex flex-col h-0 gap-2 mt-3 basis-1/5 mlg:mt-2" key={index}>
-                      {item.listItem.slice(0, 5).map((listName, index) => {
-                        return (
-                          <Link
-                            to={`${item.url}/${index + 1}`}
-                            key={index}
-                            className="flex justify-center ml-auto mr-auto text-sm font-normal text-white transition duration-300 ease-in-out hover:text-blue-900 hover:border-b mlg:text-xs">
-                            {listName}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  );
-                })}
-              </div>
+              {listData?.navlist && (
+                <div className="flex max-w-screen-xl ml-auto mr-auto">
+                  {listData.navlist.slice(0, 5).map((item, index) => {
+                    return (
+                      <div className="inset-x-0 z-20 flex flex-col h-0 gap-2 mt-3 basis-1/5 mlg:mt-2" key={index}>
+                        {item.listItem.slice(0, 5).map((listName, index) => {
+                          return (
+                            <Link
+                              to={`${item.url}/${index + 1}`}
+                              key={index}
+                              className="flex justify-center ml-auto mr-auto text-sm font-normal text-white transition duration-300 ease-in-out hover:text-blue-900 hover:border-b mlg:text-xs">
+                              {listName}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </ul>
         </header>
