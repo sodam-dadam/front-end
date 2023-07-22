@@ -1,4 +1,6 @@
-# front-end
+# React - 소담다담 심리상담센터
+
+![image](https://ifh.cc/g/hXtOBP.jpg)
 
 **Extends**
 
@@ -31,10 +33,6 @@ Main page에서 template 사용 및 MainType.ts에서 타입 선언, 양식입�
 - node version 18.3.0
 
 - msw (비동기 목 데이터 라이브러리)
-
-  # React - 소담다담 심리상담센터
-
-![image](https://ifh.cc/g/hXtOBP.jpg)
 
 ---
 
