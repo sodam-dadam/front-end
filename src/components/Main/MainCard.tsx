@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import { IMainCardType } from './MainType';
 
-function MainCard({ title, content, img, name }: IMainCardType) {
+function MainCard({ title, content, img, name, url }: IMainCardType) {
   return (
     <div className="flex flex-col items-center justify-between w-full h-full border-b-2 border-l-2 border-r-2 rounded-t-2xl">
       <div
@@ -12,9 +13,11 @@ function MainCard({ title, content, img, name }: IMainCardType) {
       <span className="h-8 py-5 text-base font-semibold tracking-tight mlg:text-xs msm:text-xs msm:mb-0">{title}</span>
       <span className="w-[90%] mt-4 text-sm text-center mlg:hidden ">{content}</span>
       <div className="w-full max-w-[200px]">
-        <button className="self-end h-8 my-4 border text-sm msm:text-xs whitespace-nowrap  border-[#4575CA] text-[#4575CA] mlg:mb-0 w-full mlg:mt-2">
+        <Link
+          to={url}
+          className="self-end h-8 my-4 border text-sm msm:text-xs whitespace-nowrap border-[#4575CA] text-[#4575CA] mlg:mb-0 w-full mlg:mt-2 inline-flex justify-center items-center">
           자세히보기
-        </button>
+        </Link>
       </div>
     </div>
   );

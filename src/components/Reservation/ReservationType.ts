@@ -2,7 +2,7 @@ export interface IInputStateType {
   agree: string;
   program: string;
   name: string;
-  genger: string;
+  gender: string;
   age: string;
   phoneNumber_first: string;
   phoneNumber_second: string;

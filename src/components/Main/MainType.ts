@@ -3,6 +3,7 @@ export interface IMainCardType {
   title: string;
   content: string;
   name: string;
+  url: string;
 }
 
 export interface IMainBoxType {

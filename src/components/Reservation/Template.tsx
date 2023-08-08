@@ -12,7 +12,7 @@ function Template() {
     agree: '',
     program: '',
     name: '',
-    genger: '',
+    gender: '',
     age: '',
     phoneNumber_first: '',
     phoneNumber_second: '',
@@ -105,7 +105,9 @@ function Template() {
     setInputState(newInputState);
   };
 
-  // console.log(inputState);
+  const submitBtn = () => {
+    console.log(inputState);
+  };
 
   return (
     <>
@@ -357,7 +359,9 @@ function Template() {
           </tbody>
         </table>
         <div className="flex justify-end mt-8 mb-8 mmd:mt-4 mmd:mb-4">
-          <button className="px-6 py-2 text-sm bg-gray-200 mmd:text-xs mmd:px-4">확인</button>
+          <button className="px-6 py-2 text-sm bg-gray-200 mmd:text-xs mmd:px-4" onClick={submitBtn}>
+            확인
+          </button>
         </div>
       </div>
     </>

@@ -14,7 +14,7 @@ function MainBox({ data, name }: IMainBoxType) {
               name === '심리 상담' ? 'gap-1' : 'gap-16 mlg:gap-12'
             }`}>
             {data.map((item: IMainCardType) => (
-              <MainCard title={item.title} content={item.content} img={item.img} name={name} />
+              <MainCard title={item.title} content={item.content} img={item.img} name={name} url={item.url} />
             ))}
           </div>
         </div>

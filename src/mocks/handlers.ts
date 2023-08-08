@@ -19,26 +19,31 @@ export const handlers = [
             img: '/images/persnalCounselingImg.png',
             title: '개인 상담',
             content: '스트레스 완화, 적응력 향상을 위한 1:1 성인상담',
+            url: 'http://localhost:3000/Counseling/1',
           },
           {
             img: '/images/groupCounselingImg.png',
             title: '집단 상담',
             content: '공동의 주제에 대해 나누는 성장, 교육집단',
+            url: 'http://localhost:3000/Counseling/2',
           },
           {
             img: '/images/psychologicalTestImg.png',
             title: '심리 검사',
             content: '맞춤형 심리검사를 선정하여 심층적 자기 이해',
+            url: 'http://localhost:3000/Counseling/3',
           },
           {
             img: '/images/teenagerAndParentCounselingImg.png',
             title: '청소년 • 부모상담',
             content: '청소년의 적응문제 해결 및 부모역량강화',
+            url: 'http://localhost:3000/Counseling/4',
           },
           {
             img: '/images/coupleCounselingImg.png',
             title: '부부 • 커플상담',
             content: '부부, 커플의 관계성 향상을 위한 심리상담',
+            url: 'http://localhost:3000/Counseling/5',
           },
         ],
         education: [
@@ -46,16 +51,19 @@ export const handlers = [
             img: '/images/workShopImg.png',
             title: '특강 및 워크샵',
             content: '주제별 강연, 참여 활동 프로그램',
+            url: 'http://localhost:3000/Education/1',
           },
           {
             img: '/images/supervisionImg.png',
             title: '상담자 교육',
             content: '상담 전문가 양성을 위한 교육 프로그램',
+            url: 'http://localhost:3000/Education/2',
           },
           {
             img: '/images/bookReadingImg.png',
             title: '북리딩 세미나',
             content: '책을 통해 내면의 성장을 돕는 소규모 세미나',
+            url: 'http://localhost:3000/Education/3',
           },
         ],
         navlist: [
